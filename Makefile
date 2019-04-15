@@ -6,10 +6,10 @@ install: ## Install dependencies
 	@cd blog && yarn install
 
 clean: ## Clean up the build folder for building
-	@cd front && rm -rf build
+	@cd blog && rm -rf build
 
 start: ## Start development server
-	@cd front && npm run start
+	@cd blog && npm run start
 
 deploy:
 	cd blog && yarn build
