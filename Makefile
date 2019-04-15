@@ -11,6 +11,7 @@ clean: ## Clean up the build folder for building
 start: ## Start development server
 	@cd blog && npm run start
 
-deploy:
+deploy: clean ## Deploy builded blog on now
 	cd blog && yarn build
-	cd blog/build && now
+	cp now.json blog/build/
+	now --target=production blog/build
