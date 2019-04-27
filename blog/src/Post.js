@@ -28,23 +28,31 @@ export const Post = ({ postId }) => (
             if (error) return <p>Error :(</p>;
             return (
                 <Container>
-                    <Link to="/">retour à la liste</Link>
+                    <Link to="/" style={{ margin: '1rem' }}>
+                        retour à la liste
+                    </Link>
                     <Image src={data.Post.mainImage.asset.url} fluid />
                     <Header
                         as="h1"
-                        style={{ margin: '2rem' }}
+                        style={{
+                            fontSize: '3rem',
+                            paddingBottom: '2rem',
+                            fontFamily: "'Amatic SC', cursive",
+                        }}
                         content={data.Post.title}
                         textAlign="center"
                     />
-                    {data.Post.bodyRaw.map(block => (
-                        <BlockContent
-                            key={block._key}
-                            blocks={block}
-                            imageOptions={{ w: 320, h: 240, fit: 'max' }}
-                            projectId="kcoj688h"
-                            dataset="production"
-                        />
-                    ))}
+                    <div style={{ padding: '1rem' }}>
+                        {data.Post.bodyRaw.map(block => (
+                            <BlockContent
+                                key={block._key}
+                                blocks={block}
+                                imageOptions={{ w: 320, h: 240, fit: 'max' }}
+                                projectId="kcoj688h"
+                                dataset="production"
+                            />
+                        ))}
+                    </div>
                 </Container>
             );
         }}

@@ -13,6 +13,7 @@ export const Home = () => (
                 allPosts {
                     _id
                     title
+                    description
                     mainImage {
                         asset {
                             url
@@ -32,7 +33,7 @@ export const Home = () => (
             if (error)
                 return (
                     <Container>
-                        <p>Error :(</p>
+                        <p>Error :( {error.message}</p>
                     </Container>
                 );
             return (
@@ -61,6 +62,7 @@ export const Home = () => (
                                             <Link to={`/${post._id}`}>
                                                 <h2>{post.title}</h2>
                                             </Link>
+                                            <p>{post.description}</p>
                                         </Item.Header>
                                     </Item.Content>
                                 </Item>
