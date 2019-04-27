@@ -3,6 +3,7 @@ import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
 import { Header } from 'semantic-ui-react';
 import { Router } from '@reach/router';
+import { Container } from 'semantic-ui-react';
 
 import { Home } from './Home';
 import { Post } from './Post';
@@ -13,15 +14,21 @@ const client = new ApolloClient({
 
 export const App = () => (
     <ApolloProvider client={client}>
-        <Header
-            as="h1"
-            style={{ margin: '2rem' }}
-            content="KouMoiÇa : le blog de Rosemarie"
-            textAlign="center"
-        />
-        <Router>
-            <Home path="/" />
-            <Post path="/:postId" />
-        </Router>
+        <Container className="mainContainer">
+            <Header
+                as="h1"
+                style={{
+                    fontSize: '3rem',
+                    padding: '2rem',
+                    fontFamily: "'Amatic SC', cursive",
+                }}
+                content="KOUMOIÇA : le blog de Rosemarie"
+                textAlign="center"
+            />
+            <Router>
+                <Home path="/" />
+                <Post path="/:postId" />
+            </Router>
+        </Container>
     </ApolloProvider>
 );
