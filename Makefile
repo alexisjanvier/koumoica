@@ -3,15 +3,15 @@ help:
 
 install: ## Install dependencies
 	@cd sanity && sanity upgrade
-	@cd blog && yarn install
+	@cd svelteBlog && npm install
 
 clean: ## Clean up the build folder for building
 	@cd blog && rm -rf build
 
 start: ## Start development server
-	@cd blog && npm run start
+	@cd svelteBlog && npm run start
 
 deploy: clean ## Deploy builded blog on now
-	cd blog && yarn build
-	cp now.json blog/build/
-	now --target=production blog/build
+	# cd blog && yarn build
+	# cp now.json blog/build/
+	# now --target=production blog/build
