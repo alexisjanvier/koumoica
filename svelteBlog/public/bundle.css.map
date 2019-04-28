@@ -1,8 +1,12 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "../src/App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\tlet name = 'Koumoica';\n</script>\n\n<style lang=\"sass\" type=\"text/scss\">h1 {\n  color: red;\n}\n\n.test p {\n  font-size: 3rem;\n}\n.test p span {\n  color: green;\n}</style>\n\n<h1>Hello {name}!</h1>\n<div class=\"test\"><p>Plop<span>Yea</span></p></div>\n"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AAIoC,EAAE,eAAC,CAAC,AACtC,KAAK,CAAE,GAAG,AACZ,CAAC,AAED,oBAAK,CAAC,CAAC,eAAC,CAAC,AACP,SAAS,CAAE,IAAI,AACjB,CAAC,AACD,oBAAK,CAAC,CAAC,CAAC,IAAI,eAAC,CAAC,AACZ,KAAK,CAAE,KAAK,AACd,CAAC"
 }
