@@ -20,15 +20,20 @@
   },
   "homepage": "https://github.com/alexisjanvier/koumoica#readme",
   "scripts": {
-    "clean": "rm dist/bundle.js",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "run-p start autobuild",
+    "start": "live-server --port=3000 --no-browser ./public"
   },
   "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "1.12.3",
-    "parcel-plugin-svelte": "3.0.0",
-    "sass": "1.19.0",
+    "live-server": "1.2.1",
+    "npm-run-all": "4.1.5",
+    "rollup": "1.10.1",
+    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-node-resolve": "4.2.3",
+    "rollup-plugin-svelte": "5.0.3",
+    "rollup-plugin-terser": "4.0.4",
     "svelte": "3.1.0"
   }
 }

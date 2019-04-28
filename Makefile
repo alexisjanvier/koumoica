@@ -9,7 +9,7 @@ clean: ## Clean up the build folder for building
 	@cd blog && rm -rf build
 
 start: ## Start development server
-	@cd svelteBlog && npm run start
+	@cd svelteBlog && npm run dev
 
 deploy: clean ## Deploy builded blog on now
 	# cd blog && yarn build
