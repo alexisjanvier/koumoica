@@ -2,7 +2,7 @@
 	let name = 'Koumoica';
 </script>
 
-<style lang="sass" type="text/scss">
+<style lang="scss" type="text/scss">
   h1 {
     color: red;
   }
